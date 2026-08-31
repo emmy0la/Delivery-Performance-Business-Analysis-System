@@ -131,21 +131,17 @@ Bonus Analysis
 ↓
 Summary Report
 
-
-
 The solution separates different responsibilities into reusable functions. This makes the code easier to understand, test, debug, and reuse.
 
 ---
 
-## Running Code
+### Running Code
 
 The following screenshots show the system successfully running and generating delivery reports.
 
 ### Delivery Report Output
 
 ![image alt](https://github.com/emmy0la/Delivery-Performance-Business-Analysis-System/blob/f5e34c8dabdb9f583a21dbb086aa2e71ccb9a58d/Images/Delivery%20Report%20Output.png)
-
-*Figure 1: Sample delivery report showing validated delivery information, performance analysis, priority assignment, and recommended action.*
 
 ---
 
@@ -258,7 +254,7 @@ def recommend_delivery_action(delivery_priority):
 
 The function returns VALID or INVALID.
 
-## Sample Delivery Record
+### Sample Delivery Record
 
 The initial test record contains:
 
@@ -282,9 +278,16 @@ Recommended Action: Continue Delivery Process
 Validation: VALID
 ```
 
+---
+
 ## Sample Delivery Report
 
 ![image alt](https://github.com/emmy0la/Delivery-Performance-Business-Analysis-System/blob/e572de90fa80db248fedc2c185e44fd04e718322/Images/Sample%20Delivery%20Report.png)
+
+
+*Figure 1: Sample delivery report showing validated delivery information, performance analysis, priority assignment, and recommended action.*
+
+---
 
 ## Bonus Analysis Results
 
@@ -296,14 +299,14 @@ Based on the six fictional delivery records:
 
 *Figure 2: Bonus analysis showing delivery performance, priority distribution, and key operational insights.*
 
+---
+
 ## Summary Report
 ![image alt](https://github.com/emmy0la/Delivery-Performance-Business-Analysis-System/blob/ea020ccff37b424338792803e42d163b2eb0d4a2/Images/Summary%20Report.png)
 
 *Figure 3: Final summary report providing a concise view of delivery performance metrics.*
 
-## Testing Strategy
-
-A working program should not be tested with only valid data.
+---
 
 ## Testing Strategy
 
@@ -328,6 +331,8 @@ The testing process follows:
 Write -> Run -> Observe -> Identify Error -> Debug -> Fix -> Test Again
 ```
 
+---
+
 ## Python Concepts Demonstrated
 
 | Concept | Application |
@@ -349,6 +354,8 @@ Write -> Run -> Observe -> Identify Error -> Debug -> Fix -> Test Again
 | Local Variables | Demonstrate function-level scope |
 | Debugging | Identify and correct problems |
 
+---
+
 ## Project Structure
 
 ```text
@@ -367,12 +374,16 @@ delivery-status-management-system/
     └── testing_results.md
 ```
 
+---
+
 ## How to Run
 
 ```text
 Jupyter Notebook
 Open Gift_II_Delivery_System.ipynb and run the notebook cells from top to bottom.
 ```
+
+---
 
 ## What This Project Demonstrates
 
@@ -402,6 +413,8 @@ The project demonstrates:
 
 The project also demonstrates how Python fundamentals can be connected to a practical business workflow.
 
+---
+
 ## Key Learning Outcome
 
 GIFT II reinforced an important principle:
@@ -426,6 +439,8 @@ Analyse
 Communicate
 ```
 The project strengthened my ability to combine Python syntax, logical thinking, data processing, and business reasoning in one workflow.
+
+---
 
 ## Connect With Me
 
