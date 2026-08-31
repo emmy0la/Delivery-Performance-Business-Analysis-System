@@ -1,4 +1,4 @@
-# GIFT II: Delivery Status Management System
+# Delivery Status Management System
 
 ## Python-Based Logistics Tracking and Business Analysis Project
 
@@ -143,7 +143,7 @@ The following screenshots show the system successfully running and generating de
 
 ### Delivery Report Output
 
-![Delivery Report](screenshots/delivery_report.png)
+![image alt](https://github.com/emmy0la/Delivery-Performance-Business-Analysis-System/blob/f5e34c8dabdb9f583a21dbb086aa2e71ccb9a58d/Images/Delivery%20Report%20Output.png)
 
 *Figure 1: Sample delivery report showing validated delivery information, performance analysis, priority assignment, and recommended action.*
 
@@ -262,6 +262,7 @@ The function returns VALID or INVALID.
 
 The initial test record contains:
 
+```text
 Delivery ID: DEL001
 Customer Name: Daniel Okafor
 Delivery Location: Lagos
@@ -270,3 +271,30 @@ Days Since Order: 4
 Expected Delivery Days: 5
 Package Weight: 3.5 kg
 Delivery Attempts: 1
+```
+
+The system evaluates the record and determines:
+
+```text
+Performance: On Time
+Priority: Normal
+Recommended Action: Continue Delivery Process
+Validation: VALID
+```
+
+## Sample Delivery Report
+
+![image alt](https://github.com/emmy0la/Delivery-Performance-Business-Analysis-System/blob/e572de90fa80db248fedc2c185e44fd04e718322/Images/Sample%20Delivery%20Report.png)
+
+## Bonus Analysis Results
+
+The project goes beyond processing individual records by analysing the complete delivery dataset.
+
+Based on the six fictional delivery records:
+
+![image alt](https://github.com/emmy0la/Delivery-Performance-Business-Analysis-System/blob/47f93e552bc5e7f6c2ce0ba32c106d1be9cbc9b6/Images/Bonus%20Analysis%20Results.png)
+
+*Figure 2: Bonus analysis showing delivery performance, priority distribution, and key operational insights.*
+
+## Summary Report
+![image alt](https://github.com/emmy0la/Delivery-Performance-Business-Analysis-System/blob/ea020ccff37b424338792803e42d163b2eb0d4a2/Images/Summary%20Report.png)
