@@ -108,3 +108,105 @@ The system was designed to:
 ---
 
 ## Solution Workflow
+
+Raw Delivery Data
+↓
+Data Validation
+↓
+Individual Delivery Processing
+↓
+Business Rule Evaluation
+↓
+Multiple Delivery Processing
+↓
+Performance Analysis
+↓
+Priority Assignment
+↓
+Recommended Action
+↓
+Delivery Report
+↓
+Bonus Analysis
+↓
+Summary Report
+
+
+
+The solution separates different responsibilities into reusable functions. This makes the code easier to understand, test, debug, and reuse.
+
+---
+
+## Running Code
+
+The following screenshots show the system successfully running and generating delivery reports.
+
+### Delivery Report Output
+
+![Delivery Report](screenshots/delivery_report.png)
+
+*Figure 1: Sample delivery report showing validated delivery information, performance analysis, priority assignment, and recommended action.*
+
+---
+
+## Delivery Business Rules
+
+### Delivery Statuses
+
+| Status | Meaning |
+|--------|---------|
+| Order Received | Order has been received but processing has not started |
+| Processing | Order is being prepared for dispatch |
+| Dispatched | Package has left the warehouse or seller |
+| In Transit | Package is moving toward the customer |
+| Delivered | Package has reached the customer |
+| Delayed | Expected delivery period has passed |
+| Cancelled | Delivery has been cancelled |
+
+### Delivery Performance Rules
+
+| Condition | Performance |
+|-----------|-------------|
+| Delivered | Completed |
+| Cancelled | Cancelled |
+| Days Since Order <= Expected Days | On Time |
+| Days Since Order > Expected Days | Delayed |
+
+### Priority Rules
+
+| Condition | Priority |
+|-----------|----------|
+| Delayed + 2 or more attempts | Urgent |
+| Delayed + at least 1 attempt | High |
+| On Time + at least 1 attempt | Normal |
+| On Time + 0 attempts | Low |
+
+### Recommended Actions
+
+| Priority | Recommended Action |
+|----------|-------------------|
+| Urgent | Contact Customer and Escalate Delivery |
+| High | Investigate Delivery Delay |
+| Normal | Continue Delivery Process |
+| Low | Monitor Delivery |
+
+---
+
+## Core Functions
+
+### 1. Delivery Performance
+
+```python
+def check_delivery_performance(
+    delivery_status,
+    days_since_order,
+    expected_delivery_days
+):
+    if delivery_status == "Cancelled":
+        return "Cancelled"
+    elif delivery_status == "Delivered":
+        return "Completed"
+    elif days_since_order <= expected_delivery_days:
+        return "On Time"
+    else:
+        return "Delayed"
