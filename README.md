@@ -298,3 +298,22 @@ Based on the six fictional delivery records:
 
 ## Summary Report
 ![image alt](https://github.com/emmy0la/Delivery-Performance-Business-Analysis-System/blob/ea020ccff37b424338792803e42d163b2eb0d4a2/Images/Summary%20Report.png)
+
+*Figure 3: Final summary report providing a concise view of delivery performance metrics.*
+
+## Testing Strategy
+
+A working program should not be tested with only valid data.
+
+```text
+Test Case	Input	Expected Behaviour
+Valid delivery	Complete valid record	Record processed
+Empty ID	Blank delivery ID	Record rejected
+Invalid status	Unknown status	Record rejected
+Negative days	-3	Record rejected
+Zero expected days	0	Record rejected
+Negative weight	-5.0	Record rejected
+Negative attempts	-1	Record rejected
+Multiple records	Six deliveries	All records processed
+Boundary delivery	Days = Expected Days	On Time
+Delayed delivery	Days > Expected Days	Delayed
