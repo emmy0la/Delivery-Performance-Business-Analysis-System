@@ -210,10 +210,11 @@ def check_delivery_performance(
         return "On Time"
     else:
         return "Delayed"
----
+```
 
 ### 2. Delivery Priority
 
+```python
 def determine_delivery_priority(
     delivery_performance,
     delivery_attempts
@@ -226,3 +227,33 @@ def determine_delivery_priority(
         return "Normal"
     else:
         return "Low"
+```
+
+### 3. Recommended Action
+
+```python
+def recommend_delivery_action(delivery_priority):
+    if delivery_priority == "Urgent":
+        return "Contact Customer and Escalate Delivery"
+    elif delivery_priority == "High":
+        return "Investigate Delivery Delay"
+    elif delivery_priority == "Normal":
+        return "Continue Delivery Process"
+    else:
+        return "Monitor Delivery"
+```
+
+### 4. Delivery Validation
+
+Field	Validation Rule
+Delivery ID	Cannot be empty
+Customer Name	Cannot be empty
+Delivery Location	Cannot be empty
+Delivery Status	Must be an accepted status
+Days Since Order	Must be >= 0
+Expected Delivery Days	Must be > 0
+Package Weight	Must be > 0
+Delivery Attempts	Must be >= 0
+The function returns VALID or INVALID.
+
+
