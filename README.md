@@ -210,3 +210,18 @@ def check_delivery_performance(
         return "On Time"
     else:
         return "Delayed"
+
+### 2. Delivery Priority
+
+def determine_delivery_priority(
+    delivery_performance,
+    delivery_attempts
+):
+    if delivery_performance == "Delayed" and delivery_attempts >= 2:
+        return "Urgent"
+    elif delivery_performance == "Delayed" and delivery_attempts >= 1:
+        return "High"
+    elif delivery_performance == "On Time" and delivery_attempts >= 1:
+        return "Normal"
+    else:
+        return "Low"
