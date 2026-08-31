@@ -245,15 +245,28 @@ def recommend_delivery_action(delivery_priority):
 
 ### 4. Delivery Validation
 
-Field	Validation Rule
-Delivery ID	Cannot be empty
-Customer Name	Cannot be empty
-Delivery Location	Cannot be empty
-Delivery Status	Must be an accepted status
-Days Since Order	Must be >= 0
-Expected Delivery Days	Must be > 0
-Package Weight	Must be > 0
-Delivery Attempts	Must be >= 0
+| Field                  | Validation Rule                    |
+|------------------------|------------------------------------|
+| Delivery ID            | Cannot be empty                    |
+| Customer Name          | Cannot be empty                    |
+| Delivery Location      | Cannot be empty                    |
+| Delivery Status        | Must be an accepted status         |
+| Days Since Order       | Must be >= 0                       |
+| Expected Delivery Days | Must be > 0                        |
+| Package Weight         | Must be > 0                        |
+| Delivery Attempts      | Must be >= 0                       |
+
 The function returns VALID or INVALID.
 
+## Sample Delivery Record
 
+The initial test record contains:
+
+Delivery ID: DEL001
+Customer Name: Daniel Okafor
+Delivery Location: Lagos
+Delivery Status: In Transit
+Days Since Order: 4
+Expected Delivery Days: 5
+Package Weight: 3.5 kg
+Delivery Attempts: 1
