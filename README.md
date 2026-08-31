@@ -305,15 +305,152 @@ Based on the six fictional delivery records:
 
 A working program should not be tested with only valid data.
 
+## Testing Strategy
+
+A working program should not be tested with only valid data. The project uses different scenarios to test the logic.
+
+| Test Case | Input | Expected Behaviour |
+|-----------|-------|-------------------|
+| Valid delivery | Complete valid record | Record processed |
+| Empty ID | Blank delivery ID | Record rejected |
+| Invalid status | Unknown status | Record rejected |
+| Negative days | -3 | Record rejected |
+| Zero expected days | 0 | Record rejected |
+| Negative weight | -5.0 | Record rejected |
+| Negative attempts | -1 | Record rejected |
+| Multiple records | Six deliveries | All records processed |
+| Boundary delivery | Days = Expected Days | On Time |
+| Delayed delivery | Days > Expected Days | Delayed |
+
+The testing process follows:
+
 ```text
-Test Case	Input	Expected Behaviour
-Valid delivery	Complete valid record	Record processed
-Empty ID	Blank delivery ID	Record rejected
-Invalid status	Unknown status	Record rejected
-Negative days	-3	Record rejected
-Zero expected days	0	Record rejected
-Negative weight	-5.0	Record rejected
-Negative attempts	-1	Record rejected
-Multiple records	Six deliveries	All records processed
-Boundary delivery	Days = Expected Days	On Time
-Delayed delivery	Days > Expected Days	Delayed
+Write -> Run -> Observe -> Identify Error -> Debug -> Fix -> Test Again
+```
+
+## Python Concepts Demonstrated
+
+| Concept | Application |
+|---------|-------------|
+| Variables | Store delivery and calculation data |
+| Strings, Integers, Floats | Store different data types |
+| Lists, Dictionaries | Structure multiple records |
+| Arithmetic Operators | Calculate percentages |
+| Comparison Operators | Validate and classify records |
+| Logical Operators | Combine validation and priority conditions |
+| if, elif, else | Evaluate conditions |
+| for Loop | Process multiple deliveries |
+| while Loop | Repeat input validation |
+| Functions | Separate responsibilities |
+| Parameters | Allow functions to receive data |
+| Arguments | Supply values to functions |
+| Return Values | Pass processed results between functions |
+| Global Variables | Demonstrate global scope |
+| Local Variables | Demonstrate function-level scope |
+| Debugging | Identify and correct problems |
+
+## Project Structure
+
+delivery-status-management-system/
+│
+├── README.md
+├── Gift_II_Delivery_System.ipynb
+├── delivery_system.py
+│
+├── images/
+│   ├── delivery_report.png
+│   ├── bonus_analysis.png
+│   └── summary_report.png
+│
+└── docs/
+    └── testing_results.md
+
+## How to Run
+
+Jupyter Notebook
+Open Gift_II_Delivery_System.ipynb and run the notebook cells from top to bottom.
+
+## What This Project Demonstrates
+
+The project demonstrates:
+
+- Rule-based data processing
+
+- Input validation
+
+- Reusable functions
+
+- Conditional business logic
+
+- Batch processing
+
+- Loop-based automation
+
+- Operational performance analysis
+
+- Priority classification
+
+- Action recommendation
+
+- Debugging and testing
+
+- Structured reporting
+
+The project also demonstrates how Python fundamentals can be connected to a practical business workflow.
+
+## Key Learning Outcome
+
+GIFT II reinforced an important principle:
+
+```text
+Business Problem
+       ↓
+Understand the Data
+       ↓
+Define the Rules
+       ↓
+Break the Problem Into Functions
+       ↓
+Write the Code
+       ↓
+Test
+       ↓
+Debug
+       ↓
+Analyse
+       ↓
+Communicate
+```
+The project strengthened my ability to combine Python syntax, logical thinking, data processing, and business reasoning in one workflow.
+
+## Acknowledgement
+
+This project was completed as part of the Python Study Group at SmartBizCrux Technologies under the guidance of Coach Amaefule Chukwuemeka Timothy [ACT].
+
+```text
+The GIFT II approach encouraged us to:
+
+Think First.
+Build.
+Test.
+Break It.
+Debug It.
+Improve It.
+Explain It.
+```
+
+## Author
+
+Emmanuel Olawumi
+Data Analyst | Python | SQL | Excel | Data Analytics
+
+I am interested in using data, technology, and analytical thinking to solve business problems and improve decision-making.
+
+This project represents part of my progression from learning Python fundamentals to applying Python in practical business and data-analysis scenarios.
+
+## Connect With Me
+
+LinkedIn: https://www.linkedin.com/in/emmanuelolawumi/
+
+GitHub: https://github.com/emmy0la
+
